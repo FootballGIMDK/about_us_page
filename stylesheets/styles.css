@@ -1,4 +1,244 @@
 /* line 1, ../sass/styles.scss */
 body {
   font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* line 7, ../sass/styles.scss */
+.cf:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+
+/* line 15, ../sass/styles.scss */
+.main-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("../img/mainbg.png");
+  background-attachment: fixed;
+}
+
+/* line 24, ../sass/styles.scss */
+.text-wrapper {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 1167px;
+}
+
+/* line 30, ../sass/styles.scss */
+.content-about {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 45px;
+}
+/* line 35, ../sass/styles.scss */
+.content-about .about-title {
+  font-size: 35px;
+  margin: 20px auto 10px;
+}
+/* line 39, ../sass/styles.scss */
+.content-about .about-subtitle {
+  font-size: 32px;
+  font-weight: 600;
+}
+/* line 43, ../sass/styles.scss */
+.content-about .about-text {
+  font-size: 23px;
+  font-style: italic;
+  line-height: 25px;
+}
+
+/* line 49, ../sass/styles.scss */
+.content-description {
+  width: 100%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 25px 15px;
+}
+/* line 55, ../sass/styles.scss */
+.content-description .description-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+/* line 62, ../sass/styles.scss */
+.content-description .description-text {
+  font-size: 28px;
+  margin: 0 0 10px 20px;
+  line-height: 30px;
+}
+
+/* line 68, ../sass/styles.scss */
+.content-category {
+  width: 100%;
+  background-color: #1b252b;
+}
+/* line 72, ../sass/styles.scss */
+.content-category .category-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 76, ../sass/styles.scss */
+.content-category .category-wrapper .category {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin-top: -252px;
+  min-height: 600px;
+  position: relative;
+  z-index: 2;
+  width: 30%;
+  max-width: 320px;
+  text-align: center;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.4)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#80ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 95, ../sass/styles.scss */
+.content-category .category-wrapper .category-discover {
+  float: left;
+}
+/* line 98, ../sass/styles.scss */
+.content-category .category-wrapper .category-fans {
+  position: absolute;
+  left: calc(50% - 160px);
+}
+/* line 102, ../sass/styles.scss */
+.content-category .category-wrapper .category-artist {
+  float: right;
+}
+/* line 105, ../sass/styles.scss */
+.content-category .category-wrapper .category-title {
+  font-size: 45px;
+}
+/* line 108, ../sass/styles.scss */
+.content-category .category-wrapper .category-subtitle {
+  font-size: 30px;
+  font-weight: 300;
+}
+/* line 112, ../sass/styles.scss */
+.content-category .category-wrapper .category-text {
+  line-height: 25px;
+  text-align: justify;
+  word-break: break-word;
+  margin: 10px 20px 0;
+}
+
+/* line 121, ../sass/styles.scss */
+.layer {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+/* line 135, ../sass/styles.scss */
+.layer-discover {
+  background-image: url("../img/discover-bg.jpg");
+}
+
+/* line 138, ../sass/styles.scss */
+.layer-fans {
+  background-image: url("../img/fans-bg.jpg");
+}
+
+/* line 141, ../sass/styles.scss */
+.layer-artist {
+  background-image: url("../img/artist-bg.jpg");
+}
+
+/* line 145, ../sass/styles.scss */
+.layer-discover.active,
+.layer-fans.active,
+.layer-artist.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+/* line 155, ../sass/styles.scss */
+.layer-hide {
+  display: block;
+  width: 62px;
+  height: 62px;
+  border: 4px solid #fff;
+  border-radius: 35px;
+  position: absolute;
+  top: 75px;
+  right: 65px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("../img/hide-img.png");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  -webkit-transition: background-color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out;
+  -ms-transition: background-color 300ms ease-in-out;
+  -o-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+/* line 174, ../sass/styles.scss */
+.layer-hide:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 178, ../sass/styles.scss */
+.project-wrapper {
+  margin: 0 70px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 183, ../sass/styles.scss */
+.project {
+  text-align: center;
+  width: 33%;
+  float: right;
+  height: 200%;
+  margin-top: 110px;
+}
+/* line 190, ../sass/styles.scss */
+.project .project-title {
+  font-size: 75px;
+  padding: 0 40px 15px;
+}
+/* line 194, ../sass/styles.scss */
+.project .project-text {
+  line-height: 30px;
+  font-size: 25px;
+  text-align: justify;
+  word-break: break-word;
+  padding: 0 100px;
 }
