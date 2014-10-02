@@ -6,6 +6,37 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="stylesheets/screen.css">
 	<link rel="stylesheet" href="stylesheets/styles.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.category-discover').click(function(){
+				$('.layer-discover').addClass('active');
+			});
+			$('.layer-hide').click(function(){
+				$('.layer-discover').removeClass('active');
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.category-fans').click(function(){
+				$('.layer-fans').addClass('active');
+			});
+			$('.layer-hide').click(function(){
+				$('.layer-fans').removeClass('active');
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.category-artist').click(function(){
+				$('.layer-artist').addClass('active');
+			});
+			$('.layer-hide').click(function(){
+				$('.layer-artist').removeClass('active');
+			});
+		})
+	</script>
 </head>
 <body>
 	<div class="main-content">
@@ -49,28 +80,50 @@
 	<div class="layer layer-discover ">
 		<a href="#" class="layer-hide"></a>
 		<ul class="project-wrapper">
-			<li class="project project-animate">
-				<img src="img/discover-bigimg.png" alt="discovery">
-				<p class="project-title">Discover</p>
-				<p class="project-text">Search for any artist and we’ll find tracks that are sonically similar, helping you find new music you’ll love by matching your actual tastes to the songs that are out there.</p>
+			<li class="project">
+				<div class="project-static">
+					<img src="img/discover-bigimg.png" alt="discovery">
+					<p class="project-title">Discover</p>
+					<p class="project-text">Search for any artist and we’ll find tracks that are sonically similar, helping you find new music you’ll love by matching your actual tastes to the songs that are out there.</p>
+				</div>
 			</li>
 		</ul>
 	</div>
-	<div class="layer layer-fans active">
+	<div class="layer layer-fans ">
 		<a href="#" class="layer-hide"></a>
 		<ul class="project-wrapper">
-			<div class="project project-animate">
-				<img src="img/radio-icon.png" alt="radio">
-				<p class="project-title">Radio</p>
-			</div>
-			<div class="project project-animate">
-				<img src="img/recommend-icon.png" alt="reccomend">
-				<p class="project-title">Reccomend</p>
-			</div>
-			<div class="project project-animate">
-				<img src="img/gifts-icon.png" alt="gifts">
-				<p class="project-title">Gifts</p>
-			</div>
+			<li class="project">
+				<div class="project-static">
+					<img src="img/radio-icon.png" alt="radio">
+					<p class="project-title">Radio</p>
+				</div>
+				<div class="project-animate">
+					<img src="img/radio-icon.png" alt="radio">
+					<p class="project-title">Radio</p>
+				</div>
+			</li>
+			<li class="project project-animate">
+				<div class="project-static">
+					<img src="img/recommend-icon.png" alt="reccomend">
+					<p class="project-title">Reccomend</p>
+				</div>
+				<div class="project-animate">
+					<img src="img/recommend-icon.png" alt="reccomend">
+					<p class="project-title">Reccomend</p>
+				</div>
+
+			</li>
+			<li class="project project-animate">
+				<div class="project-static">
+					<img src="img/gifts-icon.png" alt="gifts">
+					<p class="project-title">Gifts</p>
+				</div>
+				<div class="project-animate">
+					<img src="img/gifts-icon.png" alt="gifts">
+					<p class="project-title">Gifts</p>
+				</div>
+
+			</li>
 		</ul>
 	</div>
 	<div class="layer layer-artist ">
