@@ -11,9 +11,11 @@
 		$(document).ready(function(){
 			$('.category-discover').click(function(){
 				$('.layer-discover').addClass('active');
+				$('.main-content').css('display','none');
 			});
 			$('.layer-hide').click(function(){
 				$('.layer-discover').removeClass('active');
+				$('.main-content').css('display','block');
 			});
 		})
 	</script>
@@ -21,9 +23,11 @@
 		$(document).ready(function(){
 			$('.category-fans').click(function(){
 				$('.layer-fans').addClass('active');
+				$('.main-content').css('display','none');
 			});
 			$('.layer-hide').click(function(){
 				$('.layer-fans').removeClass('active');
+				$('.main-content').css('display','block');
 			});
 		})
 	</script>
@@ -31,9 +35,11 @@
 		$(document).ready(function(){
 			$('.category-artist').click(function(){
 				$('.layer-artist').addClass('active');
+				$('.main-content').css('display','none');
 			});
 			$('.layer-hide').click(function(){
 				$('.layer-artist').removeClass('active');
+				$('.main-content').css('display','block');
 			});
 		})
 	</script>
@@ -44,7 +50,7 @@
 			<div class="content-about">
 				<p class="about-title">About us</p>
 				<p class="about-subtitle">Welcome to a world of better recommendations</p>
-				<p class="about-text">Sometimes finding great new music, books, movies or TV shows,<br> can feel like trying to find a needle in a haystack.<br> You don’t want to have to think about it.<br> You just want something that’s right for you.<br> At tunehog our mission is simple ...<br> let us remove that haystack for you.</p>
+				<p class="about-text">Sometimes finding great new music, books, movies or TV shows, can feel like trying to find a needle in a haystack. You don’t want to have to think about it. You just want something that’s right for you. At tunehog our mission is simple ... let us remove that haystack for you.</p>
 			</div>
 			<div class="content-description">
 				<h2 class="description-title">How are we doing it?</h2>
@@ -100,6 +106,7 @@
 				<div class="project-animate">
 					<img src="img/radio-icon.png" alt="radio">
 					<p class="project-title">Radio</p>
+					<p>Online radio is great, but online radio that’s tailored to your tastes is awesome. Browse our galaxy of millions of tracks, use one as the seed to grow your very own online radio stream.</p>
 				</div>
 			</li>
 			<li class="project project-animate">
